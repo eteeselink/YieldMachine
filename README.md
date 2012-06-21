@@ -5,7 +5,9 @@ Inline state machines in C#
 
 C# contains a state machine generator, used solely to support the `yield return` statement. How about we use it for, well, state machines?
 
-Example: 
+For example, the code below runs the following state machine:
+
+![Lamp state machine](https://chart.googleapis.com/chart?chl=+digraph+lamp+%7B%0D%0A+++++off+-%3E+on+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+++++on+-%3E+off+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+++++on+-%3E+error+%5Blabel%3DGotError%2C+fontsize%3D8%5D%0D%0A+++++error+-%3E+off+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+%7D%0D%0A++++++++&cht=gv)
 
 ```C#
     public class Lamp : StateMachine
