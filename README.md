@@ -21,8 +21,10 @@ Example:
         off:                                       // Each goto label is a state
             Console.WriteLine("off.");             // State entry actions
             yield return null;                     // Wait until a trigger is called
-                                                   // State exit actions (none, in this case)
-            if (Trigger == PressSwitch) goto on;   // Transitions
+                                                   // Ah, a trigger was called! 
+                                                   //   perform state exit actions (none, in this case)
+            if (Trigger == PressSwitch) goto on;   // Transitions go here: depending on the latest trigger, go to
+                                                   //   a different state
             InvalidTrigger();                      // Throw exception on invalid trigger
 
         on:
