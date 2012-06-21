@@ -9,6 +9,8 @@ For example, the code below runs the following state machine:
 
 ![Lamp state machine](https://chart.googleapis.com/chart?chl=+digraph+lamp+%7B%0D%0A+++++off+-%3E+on+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+++++on+-%3E+off+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+++++on+-%3E+error+%5Blabel%3DGotError%2C+fontsize%3D8%5D%0D%0A+++++error+-%3E+off+%5Blabel%3DPressSwitch%2C+fontsize%3D8%5D%0D%0A+%7D%0D%0A++++++++&cht=gv)
 
+Note that this state machine has 2 triggers and 3 states. In code, a state becomes a `goto` label, and a trigger becomes a property or field of type `Action`, decorated with the `Trigger` attribute:
+
 ```C#
     public class Lamp : StateMachine
     {
