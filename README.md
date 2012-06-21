@@ -1,7 +1,7 @@
 YieldMachine
 ============
 Inline state machines in C#
----------------------------
+
 
 C# contains a state machine generator, used solely to support the `yield return` statement. How about we use it for, well, state machines?
 
