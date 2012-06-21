@@ -24,8 +24,8 @@ Example:
             yield return null;                     // Wait until a trigger is called
                                                    // Ah, a trigger was called! 
                                                    //   perform state exit actions (none, in this case)
-            if (Trigger == PressSwitch) goto on;   // Transitions go here: depending on the latest trigger, go to
-                                                   //   a different state
+            if (Trigger == PressSwitch) goto on;   // Transitions go here: depending on the trigger that was called, go to
+                                                   //   the right state
             InvalidTrigger();                      // Throw exception on invalid trigger
 
         on:
