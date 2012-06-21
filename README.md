@@ -10,6 +10,7 @@ Example:
 ```C#
     public class Lamp : StateMachine
     {
+        // Triggers (or events, or actions, whatever) that your state machine understands.
         [Trigger]
         public readonly Action PressSwitch;
 
@@ -44,3 +45,5 @@ Example:
         }
     }
 ```
+
+The `[Trigger]` fields are automatically assigned action objects upon construction. These action objects, when called, set the base class's `Trigger` property to the action that was called, and then moves the state machine to the next state.
