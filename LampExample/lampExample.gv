@@ -1,6 +1,6 @@
 digraph lamp {
-    off -> on    [label=PressSwitch(), fontsize=8]
-    on -> off    [label=PressSwitch(), fontsize=8]
-    on -> error  [label=GotError(), fontsize=8]
-    error -> off [label=PressSwitch(), fontsize=8]
+    off -> on    [label="PressSwitch()", fontsize=8]
+    on -> off    [label="PressSwitch()", fontsize=8]
+    on -> error  [label="GotError()", fontsize=8]
+    error -> off [label="PressSwitch()", fontsize=8]
 }
