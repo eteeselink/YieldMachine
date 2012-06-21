@@ -18,12 +18,12 @@ Example:
 
         protected override IEnumerable WalkStates()
         {
-        off:
-            Console.WriteLine("off.");
-            yield return null;
-
-            if (Trigger == PressSwitch) goto on;
-            InvalidTrigger();
+        off:                                       // Each goto label is a state
+            Console.WriteLine("off.");             // State entry actions
+            yield return null;                     // Wait until a trigger is called
+                                                   // State exit actions (none, in this case)
+            if (Trigger == PressSwitch) goto on;   // Transitions
+            InvalidTrigger();                      // Throw exception on invalid trigger
 
         on:
             Console.WriteLine("*shiiine!*");
