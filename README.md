@@ -17,6 +17,7 @@ Example:
         [Trigger]
         public readonly Action GotError;
 
+        // Actual state machine logic
         protected override IEnumerable WalkStates()
         {
         off:                                       // Each goto label is a state
